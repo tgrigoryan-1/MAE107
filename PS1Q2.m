@@ -5,14 +5,12 @@
 
 function PS1Q2(N)
 	steps = 1000;
-	x = linspace(0,2*pi,steps); % Gives range of values from 0 to 2pi, 1000 for this case
+	x = linspace(0,2*pi,steps); % Gives range of values from 0 to 2pi in steps, 1000 for this case
 	syms xs
 	f = sin(-2*xs); % Defining our function symbolically, we can also just recognize the pattern but I wanted to try this
-	soln = double(subs(f,xs,0))*ones(1, steps); % Evaluate the function at x = 0 because this is our first term in the Taylor Expansion, 
-												% then allocate enough space for it
-
-	% The loop goes from 1 to N-1 since we already have the 0th term, and the number of terms after it is N-1
-	for i = 1:(N-1)
+	% The loop goes from 0 to N-1 since the number of terms after the 0th is N-1
+	soln = 0;
+	for i = 0:(N-1)
 		ith_deriv = diff(f,xs,i); % Get ith derivative of the function with respect to xs
 		coef = double(subs(ith_deriv, xs, 0)); % Get the coefficient for each term by substituting the center point into xs
 		soln = soln + coef .* (x.^i) / factorial(i); % Now do the running sum for each i value
