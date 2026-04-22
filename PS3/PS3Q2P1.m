@@ -1,4 +1,4 @@
-% Code for Problem Set 2 Question 2 MAE 107 SP26
+% Code for Problem Set 3 Question 2 MAE 107 SP26
 % Problem uses bracketing methods in order to find numerically an x such that lnx = 2
 % For part 1, we are tasked with using the bisection method to find the root of f(x) = ln(x) - 2
 % Initial guesses are given as xl0 = 4 and xu0 = 9, and iterations must be made until the approximate error
