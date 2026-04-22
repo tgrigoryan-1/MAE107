@@ -1,4 +1,4 @@
-% Code for Problem Set 2 Question 2 MAE 107 SP26
+% Code for Problem Set 3 Question 2 MAE 107 SP26
 % Problem uses bracketing methods in order to find numerically an x such that lnx = 2
 % For part 2, it asks us to use the false position method and compare the results to the previous part
 % The false positioning method utilizes the shape of the graph to allow us to get a quicker convergence to the root
